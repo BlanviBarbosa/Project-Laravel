@@ -24,5 +24,10 @@ class ProjectLaravelRepositoryProvider extends ServiceProvider {
 			\ProjectLaravel\Repositories\ClientRepository::class ,
 			\ProjectLaravel\Repositories\ClientRepositoryEloquent::class
 		);
+
+		$this->app->bind(
+			\ProjectLaravel\Repositories\ProjectRepository::class ,
+			\ProjectLaravel\Repositories\ProjectRepositoryEloquent::class
+		);
 	}
 }

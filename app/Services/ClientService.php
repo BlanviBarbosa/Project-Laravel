@@ -1,7 +1,10 @@
 <?php
 
 namespace ProjectLaravel\Services;
-namespace ProjectLaravel\Validators\ClientValidator;
+
+use Prettus\Validator\Exceptions\ValidatorException;
+use ProjectLaravel\Repositories\ClientRepository;
+use ProjectLaravel\Validators\ClientValidator;
 
 class ClientService {
 
