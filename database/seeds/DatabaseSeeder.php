@@ -12,7 +12,13 @@ class DatabaseSeeder extends Seeder {
 	public function run() {
 		Model::unguard();
 
+		//\ProjectLaravel\Entities\User::truncate();
+		//\ProjectLaravel\Entities\Client::truncate();
+		//\ProjectLaravel\Entities\Project::truncate();
+
+		$this->call(UserTableSeeder::class );
 		$this->call(ClientTableSeeder::class );
+		$this->call(ProjectTableSeeder::class );
 
 		Model::reguard();
 	}

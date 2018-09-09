@@ -4,28 +4,27 @@ namespace ProjectLaravel\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use ProjectLaravel\Repositories\ClientRepository;
-use ProjectLaravel\Services\ClientService;
+use ProjectLaravel\Repositories\ProjectRepository;
+use ProjectLaravel\Services\ProjectService;
 
-class ClientController extends Controller {
-
+class ProjectController extends Controller {
 	/**
 	 *
-	 * @var ClientRepository
+	 * @var ProjectRepository
 	 */
 	private $repository;
 
 	/**
 	 *
-	 * @var ClientService
+	 * @var ProjectService
 	 */
 	private $service;
 
 	/**
-	 * @param \ProjectLaravel\Repositories\ClientRepository $repository
-	 * @param \ProjectLaravel\Services\ClientService $service
+	 * @param \ProjectLaravel\Repositories\ProjectRepository $repository
+	 * @param \ProjectLaravel\Services\ProjectService $service
 	 */
-	public function __construct(ClientRepository $repository, ClientService $service) {
+	public function __construct(ProjectRepository $repository, ProjectService $service) {
 		$this->repository = $repository;
 		$this->service    = $service;
 	}
